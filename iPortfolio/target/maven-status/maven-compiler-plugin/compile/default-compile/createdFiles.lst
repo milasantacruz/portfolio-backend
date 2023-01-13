@@ -1,0 +1,11 @@
+com\spring02\demo\modelo\Usuario.class
+com\spring02\demo\service\EducacionService.class
+com\spring02\demo\controller\Controller.class
+com\spring02\demo\controller\EducacionController.class
+com\spring02\demo\service\IEducacionService.class
+com\spring02\demo\service\UsuarioService.class
+com\spring02\demo\DemoApplication.class
+com\spring02\demo\modelo\Educacion.class
+com\spring02\demo\repository\UsuarioRepository.class
+com\spring02\demo\service\IUsuarioService.class
+com\spring02\demo\repository\EducacionRepository.class
