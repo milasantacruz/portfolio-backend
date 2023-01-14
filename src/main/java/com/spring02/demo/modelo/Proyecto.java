@@ -46,16 +46,18 @@ public class Proyecto {
     
     public String titulo;
     public String descripcion;
+    public String imagen;
     public Integer inicio;
     public Integer fin;
 
     public Proyecto() {
     }
 
-    public Proyecto(Long id, String titulo, String descripcion, Integer inicio, Integer fin) {
+    public Proyecto(Long id, String titulo, String descripcion,String imagen, Integer inicio, Integer fin) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
+        this.imagen = imagen;
         this.inicio = inicio;
         this.fin = fin;
     }
