@@ -18,7 +18,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     public void addCorsMappings(CorsRegistry registry) {
 
-        registry.addMapping("/**");
+        registry.addMapping("/**").allowedOrigins("https://iportfolio.onrender.com");
 
     }
 }
