@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.spring02.demo.DemoApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 39.604 s - in com.spring02.demo.DemoApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 39.483 s - in com.spring02.demo.DemoApplicationTests
