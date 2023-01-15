@@ -5,6 +5,7 @@ C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\IInstitucionService.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\DemoApplication.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\modelo\Institucion.java
+C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\CorsConfig.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\modelo\Tecnologia.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\ITecnologiaService.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\ClienteService.java
@@ -23,7 +24,6 @@ C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\controller\InstitucionController.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\UsuarioService.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\modelo\Usuario.java
-C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\WebConfig.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\repository\InstitucionRepository.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\repository\ClienteRepository.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\EducacionService.java
