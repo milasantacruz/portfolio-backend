@@ -1,15 +1,19 @@
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\TecnologiaService.java
+C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\security\AuthCredentials.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\IEducacionService.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\controller\Controller.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\modelo\Cliente.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\IInstitucionService.java
+C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\security\JWTAuthenticationFilter.java
+C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\security\WebSecurityConfig.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\DemoApplication.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\modelo\Institucion.java
-C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\CorsConfig.java
+C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\security\UserDetailsImpl.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\modelo\Tecnologia.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\ITecnologiaService.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\ClienteService.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\IUsuarioService.java
+C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\security\TokenUtils.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\repository\ProyectoRepository.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\controller\EducacionController.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\repository\UsuarioRepository.java
@@ -17,6 +21,7 @@ C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\IProyectoService.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\controller\ProyectoController.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\repository\EducacionRepository.java
+C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\security\UserDetailServiceImpl.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\controller\ClienteController.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\modelo\Educacion.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\controller\TecnologiaController.java
@@ -25,6 +30,7 @@ C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\UsuarioService.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\modelo\Usuario.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\repository\InstitucionRepository.java
+C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\security\JWTAuthorizationFilter.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\repository\ClienteRepository.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\EducacionService.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\modelo\Proyecto.java

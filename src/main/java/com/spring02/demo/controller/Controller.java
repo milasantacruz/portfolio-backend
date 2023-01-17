@@ -12,6 +12,7 @@ import com.spring02.demo.service.IEducacionService;
 import com.spring02.demo.service.IProyectoService;
 import com.spring02.demo.service.IUsuarioService;
 import java.util.List;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,16 +27,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/usuario")
+@AllArgsConstructor
 public class Controller {
     
   @Autowired
-    private IUsuarioService serviceUsuario;
+    private final IUsuarioService serviceUsuario;
   
   @Autowired
-    private IEducacionService serviceEducacion; 
+    private final IEducacionService serviceEducacion; 
   
-  @Autowired
-    private IProyectoService serviceProyecto;
+
    
     @PostMapping("/new")
     public void agregarUsuario(@RequestBody Usuario us){
