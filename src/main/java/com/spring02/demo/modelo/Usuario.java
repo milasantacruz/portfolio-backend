@@ -45,7 +45,7 @@ public class Usuario {
   
     private String nombre;
     private String email;
-    private String password;
+    public String password;
     private String imagen_perfil;
     private String imagen_bg;
     private LocalDate fecha_nacimiento;
@@ -82,5 +82,9 @@ public class Usuario {
       public void addProyecto(Proyecto proyecto) {
         addProyecto.add(proyecto);
      }
+      
+      public void removeProyecto(Proyecto proyecto){
+          addProyecto.remove(proyecto);
+      }
  
 }

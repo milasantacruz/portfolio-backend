@@ -37,6 +37,10 @@ public class ProyectoService implements IProyectoService{
     public Proyecto buscarProyecto(Long id) {
         return proyectRepo.findById(id).get();
     }
+    @Override
+    public boolean existe(Long id){
+        return proyectRepo.existsById(id);
+    }
     
  
 

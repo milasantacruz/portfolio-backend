@@ -7,6 +7,7 @@ import com.spring02.demo.service.IClienteService;
 import com.spring02.demo.service.IProyectoService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/cliente")
+@CrossOrigin("*")
 public class ClienteController {
     @Autowired
     private IClienteService serviceCli;
@@ -27,8 +29,9 @@ public class ClienteController {
     private IProyectoService servicePro;
     
      @PostMapping("/new")
-    public void crearCliente(@RequestBody Cliente cli){
+    public Long crearCliente(@RequestBody Cliente cli){
         serviceCli.crearCliente(cli);
+        return cli.id;
     }
     
     @GetMapping("/buscar/{id}")
@@ -54,8 +57,7 @@ public class ClienteController {
         serviceCli.editarCliente(cli);
     }
     
-    
-      //CLIENTE
+     //CLIENTE
     @PutMapping("/{proyectoId}/cliente/{clienteId}")
     public Cliente agregarCliente(
             @PathVariable Long proyectoId,

@@ -18,8 +18,9 @@ public class ClienteService implements IClienteService{
     }
 
     @Override
-    public void crearCliente(Cliente cli) {
+    public Cliente crearCliente(Cliente cli) {
         clienteRepo.save(cli);
+        return cli;
     }
 
     @Override
@@ -35,6 +36,11 @@ public class ClienteService implements IClienteService{
     @Override
     public Cliente buscarCliente(Long id) {
         return clienteRepo.findById(id).get();
+    }
+    
+    @Override
+    public boolean existe(Long id){
+        return clienteRepo.existsById(id);
     }
 
 }

@@ -26,9 +26,13 @@ public class Cliente {
     private List<Proyecto> proyecto = new ArrayList<>();
     
     
-    private String nombre;
+    public String nombre;
 
     public Cliente() {
+    }
+    
+    public Cliente(String nombre) {
+        this.nombre = nombre;
     }
 
     public Cliente(Long id, String nombre) {
@@ -40,5 +44,10 @@ public class Cliente {
       public List<Proyecto> getProyecto() {
         return proyecto;
     }
+      
+    @Override
+    public String toString() {
+    return "Cliente [id=" + id + ", nombre=" + nombre + "]";
+}
     
 }

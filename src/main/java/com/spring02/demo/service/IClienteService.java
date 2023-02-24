@@ -8,11 +8,13 @@ import java.util.List;
 public interface IClienteService {
     public List <Cliente> verClientes();
     
-    public void crearCliente(Cliente cli);
+    public Cliente crearCliente(Cliente cli);
     
     public void editarCliente(Cliente cli);
     
     public void borrarCliente(long id);
     
     public Cliente buscarCliente(Long id);
+    
+    public boolean existe(Long id);
 }

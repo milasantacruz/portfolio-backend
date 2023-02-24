@@ -21,6 +21,7 @@ C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\service\IProyectoService.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\controller\ProyectoController.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\repository\EducacionRepository.java
+C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\security\CorsConfig.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\security\UserDetailServiceImpl.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\controller\ClienteController.java
 C:\Users\camila\Documents\YoProgramo\modulo-5_backend\src\main\java\com\spring02\demo\modelo\Educacion.java

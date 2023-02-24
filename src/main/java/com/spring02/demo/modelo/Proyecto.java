@@ -3,6 +3,7 @@ package com.spring02.demo.modelo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -34,7 +35,7 @@ public class Proyecto {
             joinColumns = @JoinColumn(name="proyecto_id"),
             inverseJoinColumns = @JoinColumn(name = "cliente_id")
     )
-    private List<Cliente> addCliente = new ArrayList<>();
+    public List<Cliente> addCliente = new ArrayList<>();
     
     @ManyToMany
     @JoinTable(
@@ -43,8 +44,9 @@ public class Proyecto {
             inverseJoinColumns = @JoinColumn(name = "tecnologia_id")
     )
     private List<Tecnologia> addTecnologia = new ArrayList<>();
-    
-    public String titulo;
+    @Column(unique=true)
+    public String nombre;
+    public String cargo;
     public String descripcion;
     public String imagen;
     public Integer inicio;
@@ -53,9 +55,15 @@ public class Proyecto {
     public Proyecto() {
     }
 
-    public Proyecto(Long id, String titulo, String descripcion,String imagen, Integer inicio, Integer fin) {
+    @Override
+    public String toString() {
+        return "Proyecto{" + "id=" + id + ", usuarios=" + usuarios + ", addCliente=" + addCliente + ", addTecnologia=" + addTecnologia + ", nombre=" + nombre + ", cargo=" + cargo + ", descripcion=" + descripcion + ", imagen=" + imagen + ", inicio=" + inicio + ", fin=" + fin + '}';
+    }
+
+    public Proyecto(Long id,String nombre, String cargo, String descripcion,String imagen, Integer inicio, Integer fin) {
         this.id = id;
-        this.titulo = titulo;
+        this.nombre=nombre;
+        this.cargo = cargo;
         this.descripcion = descripcion;
         this.imagen = imagen;
         this.inicio = inicio;
@@ -81,6 +89,15 @@ public class Proyecto {
 
     public void addTecnologia(Tecnologia tecnologia) {
         addTecnologia.add(tecnologia);
+    }
+    
+    public void removeCliente(Cliente cliente){
+        if (addCliente.contains(cliente)) {
+            addCliente.remove(cliente);
+            System.out.println("Cliente removed successfully");
+        } else {
+            System.out.println("Cliente not found in the list");
+        }
     }
 
   

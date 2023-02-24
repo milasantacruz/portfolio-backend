@@ -14,6 +14,8 @@ import com.spring02.demo.service.IUsuarioService;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,6 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/usuario")
 @AllArgsConstructor
+@CrossOrigin("*")
 public class Controller {
     
   @Autowired
@@ -41,6 +44,9 @@ public class Controller {
     @PostMapping("/new")
     public void agregarUsuario(@RequestBody Usuario us){
        // listaUsuarios.add(us);
+       
+       us.password = new BCryptPasswordEncoder().encode(us.password);
+       System.out.println(us.password);
        serviceUsuario.crearUsuario(us);
     }
     
