@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		System.getProperties().put( "server.port", 8181 ); 
+		System.getProperties().put( "server.port", 8180 ); 
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
