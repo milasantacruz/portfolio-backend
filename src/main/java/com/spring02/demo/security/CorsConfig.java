@@ -19,7 +19,7 @@ public class CorsConfig {
             @Override
             
             public void addCorsMappings(CorsRegistry registry){
-                registry.addMapping("/login")
+                /*registry.addMapping("/login")
                         .allowedOrigins("http://localhost:4200")
                         .allowedMethods("*")
                         .exposedHeaders("*");
@@ -34,6 +34,23 @@ public class CorsConfig {
                         .allowedMethods("*");
                 registry.addMapping("/cliente/**")
                         .allowedOrigins("http://localhost:4200")
+                        .allowedMethods("*");*/
+                
+                registry.addMapping("/login")
+                        .allowedOrigins("https://portfolio-angular-b14ce.web.app")
+                        .allowedMethods("*")
+                        .exposedHeaders("*");
+                registry.addMapping("/usuario/buscar/1")
+                        .allowedOrigins("https://portfolio-angular-b14ce.web.app")
+                        .allowedMethods("*");
+                registry.addMapping("/proyecto/**")
+                        .allowedOrigins("https://portfolio-angular-b14ce.web.app")
+                        .allowedMethods("*");
+                registry.addMapping("/proyecto/1/proyecto/**")
+                        .allowedOrigins("https://portfolio-angular-b14ce.web.app")
+                        .allowedMethods("*");
+                registry.addMapping("/cliente/**")
+                        .allowedOrigins("https://portfolio-angular-b14ce.web.app")
                         .allowedMethods("*");
             }
         };
