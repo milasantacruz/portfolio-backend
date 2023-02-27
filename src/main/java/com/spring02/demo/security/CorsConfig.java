@@ -20,20 +20,20 @@ public class CorsConfig {
             
             public void addCorsMappings(CorsRegistry registry){
                 registry.addMapping("/login")
-                        .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("https://molecular-lanni-milasantacruz.koyeb.app")
                         .allowedMethods("*")
                         .exposedHeaders("*");
                 registry.addMapping("/usuario/buscar/1")
-                        .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("https://molecular-lanni-milasantacruz.koyeb.app")
                         .allowedMethods("*");
                 registry.addMapping("/proyecto/**")
-                        .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("https://molecular-lanni-milasantacruz.koyeb.app")
                         .allowedMethods("*");
                 registry.addMapping("/proyecto/1/proyecto/**")
-                        .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("https://molecular-lanni-milasantacruz.koyeb.app")
                         .allowedMethods("*");
                 registry.addMapping("/cliente/**")
-                        .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("https://molecular-lanni-milasantacruz.koyeb.app")
                         .allowedMethods("*");
             }
         };
