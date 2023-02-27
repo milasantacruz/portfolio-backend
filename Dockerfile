@@ -1,4 +1,4 @@
-FROM amazoncorretto:17.0.0-alpine
+FROM openjdk:17-alpine
 MAINTAINER kmisantacruz
 COPY target/springboot-docker.jar springboot-docker.jar
 ENTRYPOINT ["java","-jar","/springboot-docker.jar"]
