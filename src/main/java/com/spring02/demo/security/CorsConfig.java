@@ -36,7 +36,7 @@ public class CorsConfig {
                         .allowedOrigins("http://localhost:4200")
                         .allowedMethods("*");*/
                 
-                 registry.addMapping("/login")
+                registry.addMapping("/login")
                         .allowedOrigins("https://portfolio-angular-b14ce.web.app")
                         .allowedMethods("*")
                         .exposedHeaders("*");
