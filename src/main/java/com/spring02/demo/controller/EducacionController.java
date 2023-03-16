@@ -24,8 +24,8 @@ public class EducacionController {
     @Autowired
     private IEducacionService serviceEdu;
     
-    @Autowired
-    private IInstitucionService serviceInsti;
+    //@Autowired
+   // private IInstitucionService serviceInsti;
     
     @PostMapping("/new")
     public Long crearEducacion(@RequestBody Educacion edu){

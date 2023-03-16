@@ -5,16 +5,17 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
+//import jakarta.persistence.JoinColumn;
+//import jakarta.persistence.JoinTable;
+//import jakarta.persistence.ManyToMany;
 import java.time.LocalDate;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
-import java.util.List;
+//import java.util.List;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
 @Getter 
@@ -27,30 +28,31 @@ public class Usuario {
    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
    
-   @ManyToMany
+  /* @ManyToMany
    @JoinTable(
            name="educacion_usuario",
            joinColumns = @JoinColumn(name="usuario_id"),
            inverseJoinColumns = @JoinColumn(name = "educacion_id")
    )
-   private List<Educacion> addEducacion = new ArrayList<>();
+   private List<Educacion> addEducacion = new ArrayList<>();*/
    
-   @ManyToMany
+   /*@ManyToMany
    @JoinTable(
            name="proyecto_usuario",
            joinColumns = @JoinColumn(name="usuario_id"),
            inverseJoinColumns = @JoinColumn(name = "proyecto_id")
    )
-   private List<Proyecto> addProyecto = new ArrayList<>();
+   private List<Proyecto> addProyecto = new ArrayList<>();*/
   
     private String nombre;
     private String email;
-    public String password;
+    private String password;
     private String imagen_perfil;
     private String imagen_bg;
     private LocalDate fecha_nacimiento;
     private String ocupacion;
     public String sobre_mi;
+    public String getPassword;
 
     public Usuario(Long id, String nombre, String email, String password, String imagen_perfil, String imagen_bg, LocalDate fecha_nacimiento, String ocupacion, String sobre_mi) {
         this.id = id;
@@ -66,8 +68,21 @@ public class Usuario {
 
      public Usuario() {
      }
+     
+     public String getPassword(){
+         return password;
+     }
+     
+     public String setPassword(String ps){
+         password = ps;
+         return password;
+     }
+     
+     public void changePassword(String st){
+         this.password = st;
+     }
     
-     public List<Educacion> getAddEducacion(){
+     /*public List<Educacion> getAddEducacion(){
        return addEducacion;
      } 
      
@@ -85,6 +100,6 @@ public class Usuario {
       
       public void removeProyecto(Proyecto proyecto){
           addProyecto.remove(proyecto);
-      }
+      }*/
  
 }

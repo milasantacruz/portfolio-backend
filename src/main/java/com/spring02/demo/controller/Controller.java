@@ -5,11 +5,11 @@
 package com.spring02.demo.controller;
 
 
-import com.spring02.demo.modelo.Educacion;
-import com.spring02.demo.modelo.Proyecto;
+//import com.spring02.demo.modelo.Educacion;
+//import com.spring02.demo.modelo.Proyecto;
 import com.spring02.demo.modelo.Usuario;
-import com.spring02.demo.service.IEducacionService;
-import com.spring02.demo.service.IProyectoService;
+//import com.spring02.demo.service.IEducacionService;
+//import com.spring02.demo.service.IProyectoService;
 import com.spring02.demo.service.IUsuarioService;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+//import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -36,17 +36,17 @@ public class Controller {
   @Autowired
     private final IUsuarioService serviceUsuario;
   
-  @Autowired
-    private final IEducacionService serviceEducacion; 
+ // @Autowired
+   // private final IEducacionService serviceEducacion; 
   
 
    
     @PostMapping("/new")
     public void agregarUsuario(@RequestBody Usuario us){
-       // listaUsuarios.add(us);
-       
-       us.password = new BCryptPasswordEncoder().encode(us.password);
-       System.out.println(us.password);
+       BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+       String encodedPassword = passwordEncoder.encode(us.getPassword());
+       System.out.println(encodedPassword);
+       us.setPassword(encodedPassword);
        serviceUsuario.crearUsuario(us);
     }
     
@@ -76,7 +76,7 @@ public class Controller {
     }
     
     //EDUCACION
-    @PutMapping("/{usuarioId}/educacion/{educacionId}")
+   /* @PutMapping("/{usuarioId}/educacion/{educacionId}")
     public Usuario agregarEducacion(
             @PathVariable Long usuarioId,
             @PathVariable Long educacionId
@@ -89,7 +89,7 @@ public class Controller {
             serviceUsuario.editarUsuario(usuario);
             return usuario;
             
-    }
+    }*/
     
    
     

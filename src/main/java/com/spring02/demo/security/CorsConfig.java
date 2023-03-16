@@ -19,7 +19,7 @@ public class CorsConfig {
             @Override
             
             public void addCorsMappings(CorsRegistry registry){
-               /* registry.addMapping("/login")
+               registry.addMapping("/login")
                         .allowedOrigins("http://localhost:4200")
                         .allowedMethods("*")
                         .exposedHeaders("*");
@@ -34,7 +34,7 @@ public class CorsConfig {
                         .allowedMethods("*");
                 registry.addMapping("/cliente/**")
                         .allowedOrigins("http://localhost:4200")
-                        .allowedMethods("*");*/
+                        .allowedMethods("*");
                 
                 registry.addMapping("/login")
                         .allowedOrigins("https://portfolio-angular-b14ce.web.app")

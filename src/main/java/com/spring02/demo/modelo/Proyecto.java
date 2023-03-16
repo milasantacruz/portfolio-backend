@@ -25,9 +25,9 @@ public class Proyecto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
     
-    @JsonIgnore
+   /* @JsonIgnore
     @ManyToMany(mappedBy = "addProyecto", cascade = CascadeType.ALL)
-    private List<Usuario> usuarios = new ArrayList<>();
+    private List<Usuario> usuarios = new ArrayList<>();*/
     
     @ManyToMany
     @JoinTable(
@@ -57,22 +57,23 @@ public class Proyecto {
 
     @Override
     public String toString() {
-        return "Proyecto{" + "id=" + id + ", usuarios=" + usuarios + ", addCliente=" + addCliente + ", addTecnologia=" + addTecnologia + ", nombre=" + nombre + ", cargo=" + cargo + ", descripcion=" + descripcion + ", imagen=" + imagen + ", inicio=" + inicio + ", fin=" + fin + '}';
+        return "Proyecto{" + "id=" + id + ", usuarios=" + addCliente + ", addTecnologia=" + addTecnologia + ", nombre=" + nombre + ", cargo=" + cargo + ", descripcion=" + descripcion + ", imagen=" + imagen + ", inicio=" + inicio + ", fin=" + fin + '}';
     }
 
-    public Proyecto(Long id,String nombre, String cargo, String descripcion,String imagen, Integer inicio, Integer fin) {
+    public Proyecto(Long id,String nombre, String cargo,List<Cliente> addCliente, String descripcion,String imagen, Integer inicio, Integer fin) {
         this.id = id;
         this.nombre=nombre;
         this.cargo = cargo;
+        this.addCliente = addCliente;
         this.descripcion = descripcion;
         this.imagen = imagen;
         this.inicio = inicio;
         this.fin = fin;
     }
     
-       public List<Usuario> getUsuarios() {
+     /*public List<Usuario> getUsuarios() {
        return usuarios;
-    }
+    }*/
        
        public List<Cliente> getAddCliente(){
        return addCliente;
@@ -84,7 +85,12 @@ public class Proyecto {
      } 
 
     public void addCliente(Cliente cliente) {
-        addCliente.add(cliente);
+        if (addCliente.contains(cliente)) {
+            
+        } else {
+            this.removeCliente(cliente);
+            addCliente.add(cliente);
+        }
     }
 
     public void addTecnologia(Tecnologia tecnologia) {

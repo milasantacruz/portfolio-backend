@@ -25,8 +25,8 @@ public class TecnologiaController {
     @Autowired
     private ITecnologiaService serviceTec;
     
-    @Autowired
-    private IProyectoService servicePro;
+    //@Autowired
+   // private IProyectoService servicePro;
     
     @PostMapping("/new")
     public void crearProyecto(@RequestBody Tecnologia tec){
@@ -58,7 +58,7 @@ public class TecnologiaController {
     
     
     //TECNOLOGIA
-    @PutMapping("/{proyectoId}/tecnologia/{tecnologiaId}")
+    /*@PutMapping("/{proyectoId}/tecnologia/{tecnologiaId}")
     public Tecnologia agregarEducacion(
             @PathVariable Long proyectoId,
             @PathVariable Long tecnologiaId
@@ -71,7 +71,7 @@ public class TecnologiaController {
             servicePro.editarProyecto(proyecto);
             return tecnologia;
             
-    }
+    }*/
     
     
 }

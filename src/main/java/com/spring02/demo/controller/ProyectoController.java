@@ -2,10 +2,10 @@ package com.spring02.demo.controller;
 
 import com.spring02.demo.modelo.Cliente;
 import com.spring02.demo.modelo.Proyecto;
-import com.spring02.demo.modelo.Usuario;
+//import com.spring02.demo.modelo.Usuario;
 import com.spring02.demo.service.IClienteService;
 import com.spring02.demo.service.IProyectoService;
-import com.spring02.demo.service.IUsuarioService;
+//import com.spring02.demo.service.IUsuarioService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -27,8 +27,8 @@ public class ProyectoController {
     @Autowired
     private IProyectoService servicePro;
 
-    @Autowired
-    private IUsuarioService serviceUsuario;
+    //@Autowired
+    //private IUsuarioService serviceUsuario;
 
     @Autowired
     private IClienteService serviceCliente;
@@ -59,6 +59,7 @@ public class ProyectoController {
     @PutMapping("/edit")
     @ResponseBody
     public Proyecto editarProyecto(@RequestBody Proyecto pro) {
+        
         System.out.println(pro);
         String clienteDespues = pro.addCliente.get(0).getNombre();
         ////////////CLIENTE////////////
@@ -107,12 +108,11 @@ public class ProyectoController {
             System.out.println("nuevocliente"+newCliente);
             servicePro.editarProyecto(newPro);
         }
-
-        return pro;
+    return pro;
     }
 
     //PROYECTO
-    @PutMapping("/{usuarioId}/proyecto/{proyectoId}")
+   /* @PutMapping("/{usuarioId}/proyecto/{proyectoId}")
     public Proyecto agregarProyecto(
             @PathVariable Long usuarioId,
             @PathVariable Long proyectoId
@@ -124,6 +124,6 @@ public class ProyectoController {
         serviceUsuario.editarProyecto(usuario);
         return proyecto;
 
-    }
+    }*/
 
 }
